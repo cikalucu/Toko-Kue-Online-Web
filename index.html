@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Toko Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>LiliLaliLaLiLala Bakery's</h1>
+    </header>
+
+<div class="container-produk">
+    <div class="kartu-produk">
+        <img src="img/fudgybrow.png" alt="Fudgy Brownies">
+        <div class="info-kue">
+            <h3>Fudgy Brownies</h3>
+            <p>Rp 45.000</p>
+        </div>
+    </div>
+
+    <div class="kartu-produk">
+        <img src="img/dubaicuwi.png" alt="Dubai Cheewy Cookie">
+        <div class="info-kue">
+            <h3>Dubai Cheewy Cookie</h3>
+            <p>Rp 25.000</p>
+        </div>
+    </div>
+
+    <div class="kartu-produk">
+        <img src="img/cheesecake.png" alt="Burnt Cheesecake">
+        <div class="info-kue">
+            <h3>Burnt Cheesecake</h3>
+            <p>Rp 20.000</p>
+        </div>
+    </div>
+</div>
+
+    <form id="formPesan" action="#" method="get">
+        <h2>Form Pemesanan</h2>
+
+        <div class="form-group">
+            <label for="nama">Nama Pemesan:</label>
+            <input type="text" id="nama" name="nama" pattern="[A-Za-zÀ-ÿ\s]+" title="Nama tidak boleh diawali atau mengandung angka!" required>
+        </div>
+
+        <div class="form-group">
+            <label for="hp">Nomor Handphone:</label>
+            <input type="tel" id="hp" name="hp" required pattern="[0-9]{10,13}" title="Isi 10 sampai 13 angka">
+        </div>
+
+        <div class="form-group">
+            <label for="produk">Produk:</label>
+            <select id="produk" name="produk" required>
+                <option value="">-- Pilih --</option>
+                <option value="Brownies Panggang">Fudgy Brownies</option>
+                <option value="Kue Tart Coklat">Dubai Cheewy Cookie</option>
+                <option value="Cookies Keju">Burnt Cheese Cake</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" required min="1" max="20">
+        </div>
+
+        <div class="form-group">
+            <label>Metode Pembayaran:</label>
+            <div class="radio-group">
+                <input type="radio" id="transfer" name="bayar" value="transfer" required>
+                <label for="transfer">Transfer</label>
+
+                <input type="radio" id="cod" name="bayar" value="COD">
+                <label for="cod">COD</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required minlength="10" maxlength="200"></textarea>
+        </div>
+
+        <button type="submit">Pesan</button>
+    </form>
+
+    <footer>
+        Contact Us : 0881027294111 | @LiliLaliLaLiLala.com
+    </footer>
+
+</body>
+</html>
